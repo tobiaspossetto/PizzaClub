@@ -114,7 +114,7 @@ header .eslogan {
 header .eslogan h1 {
     font-weight: 400;
     text-align: center;
-    font-size: calc(1em + 3vw);
+    font-size: calc(1em + 3.5vw);
 }
 
 header .eslogan h1 .nombre {
@@ -122,7 +122,7 @@ header .eslogan h1 .nombre {
 }
 
 header .eslogan .linea {
-    width: calc(1em + 25vw);
+    width: calc(1em + 40vw);
     height: 5px;
     background-color: #FFB40D;
     border: none;
@@ -243,6 +243,10 @@ header .eslogan .linea {
     width: 50%;
     color: black;
     padding: 20px;
+}
+
+.bebidas .contenedor-bebidas .titulo {
+    text-align: center;
 }
 
 .bebidas .contenedor-bebidas .info {
