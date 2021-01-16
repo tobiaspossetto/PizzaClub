@@ -109,6 +109,7 @@ header .eslogan .linea {
     width: 100%;
     justify-content: center;
     align-items: center;
+    margin-bottom: 150px;
 }
 
 .formulario .contacto {
@@ -218,6 +219,9 @@ footer .footer-nav .subir a img {
 }
 
 @media screen and (max-width: 750px) {
+    .formulario {
+        margin-bottom: 0px;
+    }
     .formulario .contacto {
         padding: 10px;
         background-color: #FFB40D;
