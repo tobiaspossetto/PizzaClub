@@ -1,407 +1,415 @@
-    * {
-        margin: 0;
-        padding: 0;
-        margin: 0;
-        box-sizing: border-box;
-        font-family: Raleway;
-        padding: 0;
-    }
-    
-    body::-webkit-scrollbar {
-        display: none;
-        /* Ocultar scroll */
-    }
-    
-    body {
-        width: 100%;
-        margin: 0;
-        color: white;
-        overflow-x: hidden;
-    }
-    /*GRID ES EL BODY*/
-    
-    .grid-nosotros {
-        display: grid;
-        /*DISEÑO LA GRILLA*/
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: repeat(6, auto);
-        /*                   -----------------------------------------------*/
-        grid-template-areas: "header header header header "
-        /*                   -----------------------------------------------*/
-        "titulo titulo titulo titulo"
-        /*                   -----------------------------------------------*/
-        "imagen  imagen historia  historia"
-        /*                   -----------------------------------------------*/
-        /*                   -----------------------------------------------*/
-        "horarios horarios direccion direccion "
-        /*                   -----------------------------------------------*/
-        "mapa       mapa     mapa       mapa "
-        /*                   -----------------------------------------------*/
-        "footer  footer footer footer ";
-        /*                   -----------------------------------------------*/
-    }
-    /*header*/
-    
-    .header {
-        grid-area: header;
-        background: rgb(9, 4, 22);
-        color: white;
-        background: url(../assets/img/nosotros1.jpg);
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        width: 100%;
-        height: 100vh;
-        display: flex;
-        flex-direction: column;
-    }
-    
-    header nav {
-        width: 90%;
-        margin: 20px auto;
-        display: flex;
-        justify-content: space-between;
-    }
-    
-    header nav ul {
-        display: flex;
-        list-style: none;
-        flex-wrap: wrap;
-    }
-    
-    header nav ul li a {
-        color: white;
-        padding: 10px;
-        text-decoration: none;
-        font-size: 20px;
-    }
-    
-    header nav ul li {
-        margin-right: 10px;
-    }
-    
-    header nav ul li a:hover {
-        text-decoration: underline;
-    }
-    
-    header nav ul li .activo {
-        text-decoration: underline;
-    }
-    
-    .menu_bar {
-        display: none;
-    }
-    
-    header .eslogan {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        justify-content: center;
-        height: 100vh;
-    }
-    
-    header .eslogan h1 {
-        font-weight: 400;
-        text-align: center;
-        font-size: calc(1.8em + 6vw);
-    }
-    
-    header .eslogan h1 .nombre {
-        color: #FFB40D;
-    }
-    
-    header .eslogan .linea {
-        width: calc(2em + 28vw);
-        height: 5px;
-        background-color: #FFB40D;
-        border: none;
-    }
-    
-    .titulo {
-        grid-area: titulo;
-        color: black;
-        text-align: center;
-        font-size: calc(1em + 1vw);
-        padding: 5px;
-        margin: 100px 0 100px 0;
-    }
-    
-    .titulo h1 {
-        font-weight: 500;
-    }
-    
-    .imagen {
-        grid-area: imagen;
-    }
-    
-    .imagen .contenedor-imagen {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    
-    .imagen .contenedor-imagen img {
-        width: 90%;
-    }
-    
-    .historia {
-        grid-area: historia;
-        color: black;
-        display: flex;
-        text-align: center;
-        justify-content: center;
-        align-items: center;
-    }
-    
-    .historia p {
-        width: 85%;
-        text-align: justify;
-        font-size: calc(1em + 0.4vw);
-    }
-    
-    .historia strong {
-        color: #FFB40D;
-    }
-    
-    .horarios {
-        grid-area: horarios;
-        color: black;
-        margin-top: 80px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-    }
-    
-    .horarios .linea {
-        display: none;
-    }
-    
-    .horarios .horariosatencion .nombre h4 {
-        font-size: calc(1em + 1.2vw);
-        padding: 10px;
-        font-weight: 500;
-    }
-    
-    .horarios .horariosatencion .info p {
-        font-size: calc(1em + 0.2vw);
-        padding: 10px;
-    }
-    
-    .direccion {
-        grid-area: direccion;
-        color: black;
-        margin-top: 80px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-    }
-    
-    .direccion .ubicacion .nombre h4 {
-        font-size: calc(1em + 1.2vw);
-        font-weight: 500;
-        padding: 10px;
-    }
-    
-    .direccion .ubicacion .info p {
-        font-size: calc(1em + 0.2vw);
-        padding: 10px;
-    }
-    
-    .direccion .linea {
-        display: none;
-    }
-    
-    .mapa {
-        grid-area: mapa;
-        width: 100%;
-        margin-top: 100px;
-    }
-    
-    .footer {
-        grid-area: footer;
-        width: 100%;
-        height: 200px;
-        background-color: black;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
-    
-    footer .footer-nav {
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-        width: 100%;
-    }
-    
-    footer .footer-nav img {
-        width: 150px;
-    }
-    
-    footer .footer-nav .subir {
-        padding: 10px;
-        border-radius: 50px;
-    }
-    
-    footer .footer-nav .subir:hover {
-        background-color: white;
-    }
-    
-    footer .footer-nav .subir a img {
-        width: 30px;
-    }
-    /*Media para la grid*/
-    
-    @media screen and (max-width: 1100px) {
-        .grid-nosotros {
-            display: grid;
-            /*DISEÑO LA GRILLA*/
-            grid-template-columns: repeat(4, 1fr);
-            grid-template-rows: repeat(6, auto);
-            /*                   -----------------------------------------------*/
-            grid-template-areas: "header header header header "
-            /*                   -----------------------------------------------*/
-            "titulo titulo titulo titulo"
-            /*                   -----------------------------------------------*/
-            "imagen  imagen imagen  imagen"
-            /*                   -----------------------------------------------*/
-            /*                   -----------------------------------------------*/
-            "historia historia historia historia " "horarios horarios horarios horarios " "direccion direccion direccion direccion "
-            /*                   -----------------------------------------------*/
-            "mapa       mapa     mapa       mapa "
-            /*                   -----------------------------------------------*/
-            "footer  footer footer footer ";
-            /*                   -----------------------------------------------*/
-        }
-    }
-    
-    @media screen and (max-width: 1100px) {
-        /*Media para el header*/
-        header nav {
-            background-color: #000000a6;
-            top: 64px;
-            left: -100%;
-            width: 60%;
-            height: 100%;
-            margin: 0;
-            position: fixed;
-            z-index: 1000;
-        }
-        header nav ul {
-            display: flex;
-            list-style: none;
-            flex-wrap: wrap;
-            flex-direction: column;
-            width: 100%;
-        }
-        header .icono {
-            display: none;
-        }
-        header nav ul li {
-            display: block;
-            border-bottom: 2px solid #FFB40D;
-            padding: 10px;
-        }
-        header nav ul li:hover {
-            background-color: #FFB40D;
-        }
-        .menu_bar {
-            display: flex;
-            width: 100%;
-            background-color: #000000a6;
-            align-items: center;
-            justify-content: space-between;
-            position: fixed;
-            z-index: 1000;
-        }
-        .menu_bar img {
-            padding: 10px;
-        }
-        /*Media para contenido*/
-        .imagen {
-            grid-area: imagen;
-        }
-        .imagen .contenedor-imagen {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .imagen .contenedor-imagen img {
-            width: 80%;
-        }
-        .historia {
-            grid-area: historia;
-            color: black;
-            display: flex;
-            text-align: center;
-            justify-content: center;
-            align-items: center;
-            margin-top: 70px;
-        }
-        .historia p {
-            width: 85%;
-            text-align: justify;
-            font-size: calc(1em + 0.2vw);
-        }
-        .horarios .linea {
-            display: inline-block;
-            background-color: #FFB40D;
-            border: none;
-            height: 1px;
-            width: 70%;
-            margin: 5px;
-        }
-        .direccion .linea {
-            display: inline-block;
-            background-color: #FFB40D;
-            border: none;
-            height: 1px;
-            width: 70%;
-            margin: 5px;
-        }
-    }
-    /*Media para mapa y titulo*/
-    
-    @media screen and (max-width: 425px) {
-        .titulo {
-            margin: 50px 0 50px 0;
-        }
-        .mapa iframe {
-            height: 400px;
-        }
-    }
-    /*Media para footer*/
-    
-    @media screen and (max-width: 1000px) {
-        .footer {
-            height: 100px;
-        }
-        footer .footer-nav img {
-            width: 100px;
-        }
-    }
-    
-    @media screen and (max-width: 700px) {
-        .footer {
-            height: 80px;
-        }
-        footer .footer-nav img {
-            width: 80px;
-        }
-    }
-    
-    @media screen and (max-width: 500px) {
-        .footer {
-            height: 80px;
-        }
-        footer .footer-nav img {
-            width: 50px;
-        }
-        footer .footer-nav .subir a img {
-            width: 20px;
-        }
-    }
+            * {
+                margin: 0;
+                padding: 0;
+                margin: 0;
+                box-sizing: border-box;
+                font-family: Raleway;
+                padding: 0;
+            }
+            
+            body::-webkit-scrollbar {
+                display: none;
+                /* Ocultar scroll */
+            }
+            
+            body {
+                width: 100%;
+                margin: 0;
+                color: white;
+                overflow-x: hidden;
+            }
+            /*GRID ES EL BODY*/
+            
+            .grid-nosotros {
+                display: grid;
+                /*DISEÑO LA GRILLA*/
+                grid-template-columns: repeat(4, 1fr);
+                grid-template-rows: repeat(6, auto);
+                /*                   -----------------------------------------------*/
+                grid-template-areas: "header header header header "
+                /*                   -----------------------------------------------*/
+                "titulo titulo titulo titulo"
+                /*                   -----------------------------------------------*/
+                "imagen  imagen historia  historia"
+                /*                   -----------------------------------------------*/
+                /*                   -----------------------------------------------*/
+                "horarios horarios direccion direccion "
+                /*                   -----------------------------------------------*/
+                "mapa       mapa     mapa       mapa "
+                /*                   -----------------------------------------------*/
+                "footer  footer footer footer ";
+                /*                   -----------------------------------------------*/
+            }
+            /*header*/
+            
+            .header {
+                grid-area: header;
+                background: rgb(9, 4, 22);
+                color: white;
+                background: url(../assets/img/nosotros1.jpg);
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                width: 100%;
+                height: 100vh;
+                display: flex;
+                flex-direction: column;
+            }
+            
+            header nav {
+                width: 90%;
+                margin: 20px auto;
+                display: flex;
+                justify-content: space-between;
+            }
+            
+            header nav ul {
+                display: flex;
+                list-style: none;
+                flex-wrap: wrap;
+            }
+            
+            header nav ul li a {
+                color: white;
+                padding: 10px;
+                text-decoration: none;
+                font-size: 20px;
+            }
+            
+            header nav ul li {
+                margin-right: 10px;
+            }
+            
+            header nav ul li a:hover {
+                text-decoration: underline;
+            }
+            
+            header nav ul li .activo {
+                text-decoration: underline;
+            }
+            
+            .menu_bar {
+                display: none;
+            }
+            
+            header .eslogan {
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                justify-content: center;
+                height: 100vh;
+            }
+            
+            header .eslogan h1 {
+                font-weight: 400;
+                text-align: center;
+                font-size: calc(1.8em + 6vw);
+            }
+            
+            header .eslogan h1 .nombre {
+                color: #FFB40D;
+            }
+            
+            header .eslogan .linea {
+                width: calc(2em + 28vw);
+                height: 5px;
+                background-color: #FFB40D;
+                border: none;
+            }
+            
+            .titulo {
+                grid-area: titulo;
+                color: black;
+                text-align: center;
+                font-size: calc(1em + 1vw);
+                font-weight: 400;
+                padding: 5px;
+                margin: 100px 0 100px 0;
+            }
+            
+            .titulo h1 {
+                font-weight: 500;
+            }
+            
+            .imagen {
+                grid-area: imagen;
+            }
+            
+            .imagen .contenedor-imagen {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            
+            .imagen .contenedor-imagen img {
+                width: 90%;
+            }
+            
+            .historia {
+                grid-area: historia;
+                color: black;
+                display: flex;
+                text-align: center;
+                justify-content: center;
+                align-items: center;
+            }
+            
+            .historia p {
+                width: 85%;
+                text-align: justify;
+                font-size: calc(1em + 0.4vw);
+            }
+            
+            .historia strong {
+                color: #FFB40D;
+            }
+            
+            .horarios {
+                grid-area: horarios;
+                color: black;
+                margin-top: 80px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+            }
+            
+            .horarios .linea {
+                display: none;
+            }
+            
+            .horarios .horariosatencion .nombre h4 {
+                font-size: calc(1em + 1.2vw);
+                padding: 10px;
+                font-weight: 500;
+            }
+            
+            .horarios .horariosatencion .info p {
+                font-size: calc(1em + 0.2vw);
+                padding: 10px;
+            }
+            
+            .direccion {
+                grid-area: direccion;
+                color: black;
+                margin-top: 80px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+            }
+            
+            .direccion .ubicacion .nombre h4 {
+                font-size: calc(1em + 1.2vw);
+                font-weight: 500;
+                padding: 10px;
+            }
+            
+            .direccion .ubicacion .info p {
+                font-size: calc(1em + 0.2vw);
+                padding: 10px;
+            }
+            
+            .direccion .linea {
+                display: none;
+            }
+            
+            .mapa {
+                grid-area: mapa;
+                width: 100%;
+                margin-top: 100px;
+            }
+            
+            .footer {
+                grid-area: footer;
+                width: 100%;
+                height: 200px;
+                background-color: black;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+            
+            footer .footer-nav {
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                width: 100%;
+            }
+            
+            footer .footer-nav img {
+                width: 150px;
+            }
+            
+            footer .footer-nav .subir {
+                padding: 10px;
+                border-radius: 50px;
+            }
+            
+            footer .footer-nav .subir:hover {
+                background-color: white;
+            }
+            
+            footer .footer-nav .subir a img {
+                width: 30px;
+            }
+            /*Media para la grid*/
+            
+            @media screen and (max-width: 1100px) {
+                .grid-nosotros {
+                    display: grid;
+                    /*DISEÑO LA GRILLA*/
+                    grid-template-columns: repeat(4, 1fr);
+                    grid-template-rows: repeat(6, auto);
+                    /*                   -----------------------------------------------*/
+                    grid-template-areas: "header header header header "
+                    /*                   -----------------------------------------------*/
+                    "titulo titulo titulo titulo"
+                    /*                   -----------------------------------------------*/
+                    "imagen  imagen imagen  imagen"
+                    /*                   -----------------------------------------------*/
+                    /*                   -----------------------------------------------*/
+                    "historia historia historia historia " "horarios horarios horarios horarios " "direccion direccion direccion direccion "
+                    /*                   -----------------------------------------------*/
+                    "mapa       mapa     mapa       mapa "
+                    /*                   -----------------------------------------------*/
+                    "footer  footer footer footer ";
+                    /*                   -----------------------------------------------*/
+                }
+            }
+            
+            @media screen and (max-width: 1100px) {
+                /*Media para el header*/
+                header nav {
+                    background-color: black;
+                    top: 57px;
+                    left: -100%;
+                    width: 40%;
+                    height: 100%;
+                    margin: 0;
+                    position: fixed;
+                    z-index: 1000;
+                }
+                header nav ul {
+                    display: flex;
+                    list-style: none;
+                    flex-wrap: wrap;
+                    flex-direction: column;
+                    width: 100%;
+                }
+                header .icono {
+                    display: none;
+                }
+                header nav ul li {
+                    display: block;
+                    width: calc(1em + 35vw);
+                    border-bottom: 2px solid #FFB40D;
+                    padding: 10px;
+                }
+                header nav ul li:hover {
+                    background-color: #FFB40D;
+                }
+                .menu_bar {
+                    display: flex;
+                    width: 100%;
+                    background-color: black;
+                    align-items: center;
+                    justify-content: space-between;
+                    position: fixed;
+                    z-index: 1000;
+                }
+                .menu_bar img {
+                    padding: 10px;
+                }
+                /*Media para contenido*/
+                .imagen {
+                    grid-area: imagen;
+                }
+                .imagen .contenedor-imagen {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+                .imagen .contenedor-imagen img {
+                    width: 80%;
+                }
+                .historia {
+                    grid-area: historia;
+                    color: black;
+                    display: flex;
+                    text-align: center;
+                    justify-content: center;
+                    align-items: center;
+                    margin-top: 70px;
+                }
+                .historia p {
+                    width: 85%;
+                    text-align: justify;
+                    font-size: calc(1em + 0.2vw);
+                }
+                .horarios .linea {
+                    display: inline-block;
+                    background-color: #FFB40D;
+                    border: none;
+                    height: 1px;
+                    width: 70%;
+                    margin: 5px;
+                }
+                .direccion .linea {
+                    display: inline-block;
+                    background-color: #FFB40D;
+                    border: none;
+                    height: 1px;
+                    width: 70%;
+                    margin: 5px;
+                }
+            }
+            /*Media para mapa y titulo*/
+            
+            @media screen and (max-width: 425px) {
+                .titulo {
+                    margin: 50px 0 50px 0;
+                }
+                .mapa iframe {
+                    height: 400px;
+                }
+            }
+            /*Media para footer*/
+            
+            @media screen and (max-width: 1000px) {
+                .footer {
+                    height: 100px;
+                }
+                footer .footer-nav img {
+                    width: 100px;
+                }
+            }
+            
+            @media screen and (max-width: 700px) {
+                .footer {
+                    height: 80px;
+                }
+                footer .footer-nav img {
+                    width: 80px;
+                }
+            }
+            
+            @media screen and (max-width: 500px) {
+                .footer {
+                    height: 80px;
+                }
+                footer .footer-nav img {
+                    width: 50px;
+                }
+                footer .footer-nav .subir a img {
+                    width: 20px;
+                }
+            }
+            
+            @media screen and (max-width: 750px) {
+                .header {
+                    height: 50vh;
+                }
+            }
