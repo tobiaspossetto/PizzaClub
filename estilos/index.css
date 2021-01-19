@@ -241,7 +241,8 @@ header .eslogan .btn:hover {
     grid-area: footer;
     width: 100%;
     height: 200px;
-    background-color: black;
+    background: rgb(3, 3, 70);
+    background: linear-gradient(117deg, rgba(3, 3, 70, 1) 0%, rgba(0, 0, 0, 1) 33%, rgba(0, 0, 0, 1) 95%);
     display: flex;
     align-items: center;
     justify-content: space-between;
